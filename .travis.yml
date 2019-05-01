@@ -10,18 +10,16 @@ before_install:
 script: make
 
 deploy:
-    provider: releases
-    api_key: $GITHUB_OAUTH_TOKEN
-    file: "hello"
-    skip_cleanup: true
-    draft: true
-    on:
-        tags: false
-
-deploy:
-    provider: releases
-    api_key: $GITHUB_OAUTH_TOKEN
-    file: "hello"
-    skip_cleanup: true
-    on:
-        tags: true
+    - provider: releases
+      api_key: $GITHUB_OAUTH_TOKEN
+      file: "hello"
+      skip_cleanup: true
+      draft: true
+      on:
+          tags: false
+    - provider: releases
+      api_key: $GITHUB_OAUTH_TOKEN
+      file: "hello"
+      skip_cleanup: true
+      on:
+          tags: true

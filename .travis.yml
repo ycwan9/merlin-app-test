@@ -2,7 +2,7 @@ dist: xenial
 
 cache:
     directories:
-        - "/opt/merlin-toolchain"
+        - "/opt"
 
 before_install:
     - sh toolchain_setup.sh

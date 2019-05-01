@@ -1,6 +1,7 @@
 #!/bin/sh
 TOOLCHAIN_PATH="/opt/merlin-toolchain"
-if [ -d $TOOLCHAIN_PATH ] then
+if [ -d $TOOLCHAIN_PATH ]
+then
 	echo "toolchain already exist";
 	exit
 fi

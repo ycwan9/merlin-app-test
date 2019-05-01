@@ -8,6 +8,7 @@ addons:
     apt:
         packages:
             - libc6:i386
+            - libelf1:i386
 
 before_install:
     - sudo ln -s /opt /projects

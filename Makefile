@@ -1,4 +1,5 @@
-CC := /opt/merlin-toolchain/bin/arm-uclibc-linux-2.6.36-gcc
+${PATH} := /opt/merlin-toolchain/arm-brcm-linux-uclibcgnueabi/bin:${PATH}
+CC := gcc
 CFLAGS := -Wall -Wextra
 
 PROGNAME := hello

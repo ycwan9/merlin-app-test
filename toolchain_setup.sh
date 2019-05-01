@@ -1,5 +1,5 @@
 #!/bin/sh
-TOOLCHAIN_PATH="/projects/hnd/tools/linux/"
+TOOLCHAIN_PATH="/opt/hnd/tools/linux/"
 TOOLCHAIN_NAME="hndtools-arm-linux-2.6.36-uclibc-4.5.3"
 if [ -d ${TOOLCHAIN_PATH}/$TOOLCHAIN_NAME/bin ]
 then

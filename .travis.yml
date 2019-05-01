@@ -1,14 +1,11 @@
 dist: xenial
 
-before_cache:
-    - sudo mkdir -p /projects/hnd/tools/linux
-    - sudo chown -R travis:travis /projects
-
 cache:
     directories:
-        - "/projects/hnd/tools/linux"
+        - "/opt/hnd/tools/linux"
 
 before_install:
+    - sudo ln -s /opt /projects
     - sh toolchain_setup.sh
 
 script: make

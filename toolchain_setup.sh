@@ -1,6 +1,7 @@
 #!/bin/sh
-TOOLCHAIN_PATH="/opt/merlin-toolchain"
-if [ -d ${TOOLCHAIN_PATH}/bin ]
+TOOLCHAIN_PATH="/projects/hnd/tools/linux/"
+TOOLCHAIN_NAME="hndtools-arm-linux-2.6.36-uclibc-4.5.3"
+if [ -d ${TOOLCHAIN_PATH}/$TOOLCHAIN_NAME/bin ]
 then
 	echo "toolchain already exist";
 	exit
@@ -11,6 +12,4 @@ HND_LOC="publication/src/arm-brcm-linux-uclibcgnueabi/hndtools-arm-linux-2.6.36-
 BUILDROOT_LOC="hndtools-arm-linux-2.6.36-uclibc-4.5.3/src/buildroot-2012.02.tar.bz2"
 wget "$ARCHIVE_URL" -O /tmp/gpl_archive.tgz --progress=dot:giga
 tar -C /tmp -zxvf /tmp/gpl_archive.tgz $HND_LOC
-tar -C /opt -jxvf /tmp/$HND_LOC
-rm -rf $TOOLCHAIN_PATH
-mv -T /opt/hndtools-arm-linux-2.6.36-uclibc-4.5.3 $TOOLCHAIN_PATH
+tar --overwrite --overwrite-dir -C $TOOLCHAIN_PATH -jxvf /tmp/$HND_LOC

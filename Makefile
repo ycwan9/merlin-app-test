@@ -1,4 +1,5 @@
-PATH := /opt/merlin-toolchain/bin:/opt/merlin-toolchain/arm-brcm-linux-uclibcgnueabi/bin:${PATH}
+TOOLCHAIN_PATH := /projects/hnd/tools/linux/hndtools-arm-linux-2.6.36-uclibc-4.5.3
+PATH := ${TOOLCHAIN_PATH}/bin:${TOOLCHAIN_PATH}/arm-brcm-linux-uclibcgnueabi/bin:${PATH}
 export PATH
 CC := arm-brcm-linux-uclibcgnueabi-gcc
 CFLAGS := -Wall -Wextra

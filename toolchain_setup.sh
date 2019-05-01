@@ -12,4 +12,4 @@ BUILDROOT_LOC="hndtools-arm-linux-2.6.36-uclibc-4.5.3/src/buildroot-2012.02.tar.
 wget "$ARCHIVE_URL" -O /tmp/gpl_archive.tgz --progress=dot:giga
 tar -C /tmp -zxvf /tmp/gpl_archive.tgz $HND_LOC
 tar -C /opt -jxvf /tmp/$HND_LOC
-mv /opt/hndtools-arm-linux-2.6.36-uclibc-4.5.3 $TOOLCHAIN_PATH
+mv -T /opt/hndtools-arm-linux-2.6.36-uclibc-4.5.3 $TOOLCHAIN_PATH

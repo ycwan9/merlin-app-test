@@ -1,5 +1,9 @@
 dist: xenial
 
+before_cache:
+    - sudo mkdir -p /projects/hnd/tools/linux
+    - sudo chown -R travis:travis /projects
+
 cache:
     directories:
         - "/projects/hnd/tools/linux"

@@ -4,6 +4,11 @@ cache:
     directories:
         - "/opt/hnd/tools/linux"
 
+addons:
+    apt:
+        packages:
+            - libc6:i386
+
 before_install:
     - sudo ln -s /opt /projects
     - sh toolchain_setup.sh

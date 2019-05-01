@@ -1,0 +1,27 @@
+dist: xenial
+
+cache:
+    directories:
+        - "/opt/merlin-toolchain"
+
+before_install:
+    - sh toolchain_setup.sh
+
+script: make
+
+deploy:
+    provider: releases
+    api_key: $GITHUB_OAUTH_TOKEN
+    file: "hello"
+    skip_cleanup: true
+    draft: true
+    on:
+        tags: false
+
+deploy:
+    provider: releases
+    api_key: $GITHUB_OAUTH_TOKEN
+    file: "hello"
+    skip_cleanup: true
+    on:
+        tags: true
